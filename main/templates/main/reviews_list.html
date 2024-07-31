@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+<div class="col-12 mb-5 text-center">
+    {% if user.is_authenticated %}
+    <a class="btn btn-outline-secondary" href="{% url 'main:reviews_create' %}">Добавить отзыв</a>
+    {% endif %}
+</div>
+
+<div class="card-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+    {% for object in object_list %}
+    <div class="card text-white bg-secondary" style="max-width: 18rem;">
+        <div class="card-header">Отзыв от {{ object.created_at }}</div>
+        <div class="card-body">
+            <h5 class="card-title">{{ object.user_name }}</h5>
+            <p class="card-text">{{ object.review_text }}</p>
+        </div>
+        {% if user.is_superuser or user == object.owner %}
+        <div class="d-flex justify-content-center mb-3">
+            <a class="btn btn-danger" href="{% url 'main:reviews_delete' object.pk %}">Удалить</a>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

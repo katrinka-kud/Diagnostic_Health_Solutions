@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load my_tags %}
+{% block content %}
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        .col-md-6 {
+            width: 50%;
+            text-align: center;
+        }
+    </style>
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="featurette-heading">{{ object.last_name }} {{ object.first_name }} {{ object.middle_name }}</h2>
+            <p class="lead">{{ object.specialty }}</p>
+            <p class="lead">Стаж - {{ object.experience_years }} лет</p>
+            <p class="lead">Рейтинг - {{ object.rating }}</p>
+            {% if object.phone_number %}
+                <p class="lead">Номер телефона - {{ object.phone_number }}</p>
+            {% endif %}
+            {% if object.email %}
+                <p class="lead">Электронная почта - {{ object.email }}</p>
+            {% endif %}
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="{{ object.avatar | media_filter }}" alt="фото врача"
+                 width="260" height="450">
+        </div>
+    </div>
+{% endblock %}

@@ -55,6 +55,8 @@ class Reviews(models.Model):
     review_text = models.TextField(verbose_name='текст отзыва')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='дата создания')
 
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='владелец', **NULLABLE)
+
     def str(self):
         return f'Отзыв {self.review_text} от {self.user_name}'
 
@@ -65,9 +67,9 @@ class Reviews(models.Model):
 
 
 class Appointment(models.Model):
-    doctor = models.ForeignKey(Doctors, on_delete=models.CASCADE, verbose_name='врач')
+    doctor = models.ForeignKey(Doctors, on_delete=models.CASCADE, verbose_name='врач', **NULLABLE)
     patient = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='пациент')
-    services = models.ForeignKey(Services, on_delete=models.CASCADE, verbose_name='выбранная услуга')
+    services = models.ForeignKey(Services, on_delete=models.CASCADE, verbose_name='выбранная услуга', **NULLABLE)
     appointment_date = models.DateTimeField(verbose_name='дата и время записи')
 
     def __str__(self):

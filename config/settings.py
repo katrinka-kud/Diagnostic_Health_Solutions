@@ -25,6 +25,7 @@ INSTALLED_APPS = [
 
     "main",
     "users",
+    "blog",
 ]
 
 MIDDLEWARE = [
@@ -103,3 +104,16 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 AUTH_USER_MODEL = "users.User"
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+
+EMAIL_HOST = getenv('EMAIL_HOST')
+EMAIL_PORT = getenv('EMAIL_PORT')
+EMAIL_HOST_USER = getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = getenv('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = getenv('EMAIL_USE_TLS', False) == 'True'
+EMAIL_USE_SSL = getenv('EMAIL_USE_SSL', False) == 'True'
+
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

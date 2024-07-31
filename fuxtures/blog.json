@@ -1,0 +1,54 @@
+[
+  {
+    "model": "blog.blog",
+    "pk": 1,
+    "fields": {
+      "title": "Здоровье сердца: Как сохранить его в отличной форме?",
+      "slug": "zdorove-serdtsa-kak-sohranit-ego-v-otlichnoj-forme",
+      "body": "Узнайте, как правильное питание, регулярные физические нагрузки и отказ от вредных привычек могут помочь сохранить здоровье вашего сердца.",
+      "image": "blog/blog_2_rCLWn23.jpg",
+      "created_at": "2024-07-30",
+      "is_published": true,
+      "views_count": 0
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 2,
+    "fields": {
+      "title": "Вакцинация: Зачем это важно для вас и ваших близких?",
+      "slug": "vaktsinatsiya-zachem-eto-vazhno-dlya-vas-i-vashih-blizkih",
+      "body": "Объясняем, как вакцинация защищает не только индивидуумов, но и общество в целом, а также развенчиваем популярные мифы о вакцинах.",
+      "image": "blog/blog_1_U1g7vEk.jpg",
+      "created_at": "2024-07-30",
+      "is_published": true,
+      "views_count": 2
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 3,
+    "fields": {
+      "title": "Забота о коже: Как выбрать правильный уход?",
+      "slug": "zabota-o-kozhe-kak-vyibrat-pravilnyij-uhod",
+      "body": "Обзор основных типов кожи и советы по выбору средств для ухода, чтобы сохранить кожу здоровой и красивой.",
+      "image": "blog/blog_4_8gTuaec.jpg",
+      "created_at": "2024-07-30",
+      "is_published": true,
+      "views_count": 1
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 4,
+    "fields": {
+      "title": "Правильное питание: Как составить сбалансированный рацион?",
+      "slug": "pravilnoe-pitanie-kak-sostavit-sbalansirovannyij-ratsion",
+      "body": "Простой гид по составлению здорового рациона, включая советы по выбору продуктов и планированию питания.",
+      "image": "blog/blog_3_qbD1g9c.jpg",
+      "created_at": "2024-07-30",
+      "is_published": true,
+      "views_count": 0
+    }
+  }
+]
