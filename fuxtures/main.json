@@ -55,13 +55,11 @@
       "first_name": "Светлана",
       "middle_name": "Александровна",
       "avatar": "doctors/аллерголог_5jCsb8s.jpg",
+      "specialty": 5,
       "experience_years": 10,
       "rating": "10.0",
       "phone_number": null,
-      "email": null,
-      "specialty": [
-        1
-      ]
+      "email": null
     }
   },
   {
@@ -72,13 +70,11 @@
       "first_name": "Петр",
       "middle_name": "Иванович",
       "avatar": "doctors/хирург_6pZY8GH.jpg",
+      "specialty": 6,
       "experience_years": 40,
       "rating": "10.0",
       "phone_number": null,
-      "email": null,
-      "specialty": [
-        3
-      ]
+      "email": null
     }
   },
   {
@@ -89,13 +85,11 @@
       "first_name": "Марина",
       "middle_name": "Николаевна",
       "avatar": "doctors/лазеролог_zVY8yJq.jpg",
+      "specialty": 1,
       "experience_years": 5,
       "rating": "10.0",
       "phone_number": null,
-      "email": null,
-      "specialty": [
-        5
-      ]
+      "email": null
     }
   },
   {
@@ -106,13 +100,11 @@
       "first_name": "Дмитрий",
       "middle_name": "Анатольевич",
       "avatar": "doctors/гастроэнтеролог_rJtNApQ.jpg",
+      "specialty": 3,
       "experience_years": 15,
       "rating": "10.0",
       "phone_number": null,
-      "email": null,
-      "specialty": [
-        2
-      ]
+      "email": null
     }
   },
   {
@@ -123,13 +115,11 @@
       "first_name": "Николай",
       "middle_name": "Иванович",
       "avatar": "doctors/врач_ультразвуковой_диагностики.jpg",
+      "specialty": 2,
       "experience_years": 25,
       "rating": "10.0",
       "phone_number": null,
-      "email": null,
-      "specialty": [
-        6
-      ]
+      "email": null
     }
   },
   {
@@ -140,13 +130,11 @@
       "first_name": "Елена",
       "middle_name": "Сергеевна",
       "avatar": "doctors/кардиолог_K8arZW1.jpg",
+      "specialty": 4,
       "experience_years": 15,
       "rating": "10.0",
       "phone_number": null,
-      "email": null,
-      "specialty": [
-        4
-      ]
+      "email": null
     }
   },
   {
@@ -305,6 +293,26 @@
       "patient": 7,
       "services": 4,
       "appointment_date": "2024-08-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "main.appointment",
+    "pk": 18,
+    "fields": {
+      "doctor": null,
+      "patient": 3,
+      "services": 1,
+      "appointment_date": "2024-08-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "main.appointment",
+    "pk": 19,
+    "fields": {
+      "doctor": null,
+      "patient": 7,
+      "services": 1,
+      "appointment_date": "2024-08-05T00:00:00Z"
     }
   }
 ]

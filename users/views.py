@@ -8,7 +8,7 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, UpdateView
 
 from config.settings import EMAIL_HOST_USER
-from main.forms import AppointmentForm
+from main.forms import AppointmentProfileForm
 from main.models import Appointment
 from users.forms import UserRegisterForm, UserProfileForm
 from users.models import User
@@ -54,7 +54,7 @@ class ProfileView(LoginRequiredMixin, UpdateView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        AppointmentFormset = inlineformset_factory(User, Appointment, AppointmentForm, extra=0)
+        AppointmentFormset = inlineformset_factory(User, Appointment, AppointmentProfileForm, extra=0)
         if self.request.method == 'POST':
             context_data['formset'] = AppointmentFormset(self.request.POST, instance=self.object)
         else:

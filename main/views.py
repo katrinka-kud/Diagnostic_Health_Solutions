@@ -27,6 +27,17 @@ class HomeView(TemplateView):
 
 class DoctorsListView(ListView):
     model = Doctors
+    context_object_name = 'specialty'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        doctors = context['specialty']
+        specialty_title = {}
+        for doctor in doctors:
+            specialty = doctor.specialty
+            specialty_title['specialty'] = specialty.title
+        context['specialty'] = specialty_title
+        return context
 
 
 class DoctorsDetailView(DetailView):
@@ -69,12 +80,6 @@ class AppointmentCreateView(CreateView):
         return context_data
 
     def form_valid(self, form):
-        # print(self.request.POST)
         form.instance.patient = self.request.user
-        # form.instance.services = self.get_service()
-        # print(f'Услуга: {form.instance.services}')
+        form.instance.services = self.get_context_data()['services']
         return super().form_valid(form)
-
-    # def get_service(self):
-    #     service = self.request.POST.get('service')
-    #     return Services.objects.get(pk=service)

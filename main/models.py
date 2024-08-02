@@ -21,7 +21,7 @@ class Doctors(models.Model):
     first_name = models.CharField(max_length=100, verbose_name='имя')
     middle_name = models.CharField(max_length=100, verbose_name='отчество', **NULLABLE)
     avatar = models.ImageField(upload_to='doctors/', verbose_name='фото', **NULLABLE)
-    specialty = models.ManyToManyField('Specializations', verbose_name='специализация')
+    specialty = models.ForeignKey('Specializations', on_delete=models.CASCADE, verbose_name='специализация')
     experience_years = models.PositiveIntegerField(verbose_name='опыт работы (лет)', default=0)
     rating = models.DecimalField(max_digits=3, decimal_places=1, verbose_name='рейтинг', default=0.0)
     phone_number = models.CharField(max_length=15, verbose_name='номер телефона', **NULLABLE)
