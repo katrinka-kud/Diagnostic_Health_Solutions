@@ -16,7 +16,7 @@ class DoctorsAdmin(admin.ModelAdmin):
 
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
-    list_display = ('title', 'price')
+    list_display = ('pk', 'title', 'price')
 
 
 @admin.register(Reviews)
