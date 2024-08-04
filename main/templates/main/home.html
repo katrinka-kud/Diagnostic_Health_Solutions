@@ -51,8 +51,9 @@
                                 довольных клиентов подтверждают нашу репутацию, а постоянное совершенствование знаний и
                                 навыков специалистов позволяет нам оставаться надежным партнером в диагностике
                                 здоровья</p>
-                            <p><a class="btn btn-lg btn-primary" href="{% url 'main:services_list' %}" role="button">Записаться
-                                на прием</a></p>
+                            {% if user.is_authenticated %}
+                            <p><a class="btn btn-lg btn-primary" href="{% url 'main:reviews_create' %}" role="button">Добавить отзыв</a></p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
